@@ -8,15 +8,18 @@ app.get('/', async (req, res) => {
   res.send('hola')
 });
 
+
+// rutas de task
 app.get('/tasks', async (req, res) => {
-  res.json({hola: 'mundo'})
+  res.send('hola');
 })
 
 app.post('/tasks', async (req, res) => {
   const task = new Task(req.body);
   await task.save();
-  res.json('Datos guardados correctamente');
+  res.json(data);
 })
+
 
 // configuracion
 app.use(express.json());

@@ -1,7 +1,7 @@
-import { Router } from 'express';
+import express from 'express';
 import { Task } from '../models/task';
 
-const router = Router();
+const router = express.Router();
 
 router.get('/task', (req, res) => {
   res.send('hola popo')
